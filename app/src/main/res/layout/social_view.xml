@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+    </View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/linear_buttons"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="horizontal"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="4">
+            <TextView
+                android:id="@+id/label_1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                fontPath="fonts/Arial.ttf"
+                tools:ignore="MissingPrefix"
+                android:textColor="#000000"
+                android:text="Actual streak:"
+                android:textSize="40sp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:lines="1"/>
+            <TextView
+                android:id="@+id/label_2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                fontPath="fonts/Arial.ttf"
+                tools:ignore="MissingPrefix"
+                android:textColor="#000000"
+                android:text="Full weeks:"
+                android:textSize="40sp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"/>
+            <TextView
+                android:id="@+id/label_3"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                fontPath="fonts/Arial.ttf"
+                tools:ignore="MissingPrefix"
+                android:textColor="#000000"
+                android:text="Completed:"
+                android:textSize="40sp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"/>
+            <TextView
+                android:id="@+id/label_4"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                fontPath="fonts/Arial.ttf"
+                tools:ignore="MissingPrefix"
+                android:textColor="#000000"
+                android:text="Skipped days:"
+                android:textSize="40sp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/stat_1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                fontPath="fonts/Arial Bold.ttf"
+                tools:ignore="MissingPrefix"
+                android:textColor="#000000"
+                android:text="14"
+                android:textSize="40sp"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right" />
+            <TextView
+                android:id="@+id/stat_2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                fontPath="fonts/Arial Bold.ttf"
+                tools:ignore="MissingPrefix"
+                android:textColor="#000000"
+                android:text="5"
+                android:textSize="40sp"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right" />
+            <TextView
+                android:id="@+id/stat_3"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                fontPath="fonts/Arial Bold.ttf"
+                tools:ignore="MissingPrefix"
+                android:textColor="#000000"
+                android:text="142"
+                android:textSize="40sp"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right" />
+            <TextView
+                android:id="@+id/stat_4"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                fontPath="fonts/Arial Bold.ttf"
+                tools:ignore="MissingPrefix"
+                android:textColor="#000000"
+                android:text="33"
+                android:textSize="40sp"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#f1f1f1" />
+        <TextView
+            android:id="@+id/friends"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:textColor="@android:color/black"
+            android:textSize="32sp"
+            android:text="Friends"
+            android:paddingStart="10dp"
+            fontPath="fonts/Arial.ttf"
+            tools:ignore="MissingPrefix"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#f1f1f1" />
+        <TextView
+            android:id="@+id/achievements"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:textColor="@android:color/black"
+            android:textSize="32sp"
+            android:text="Achievements"
+            android:paddingStart="10dp"
+            fontPath="fonts/Arial.ttf"
+            tools:ignore="MissingPrefix"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#f1f1f1"
+            android:layout_marginBottom="25dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="25dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="0.33"
+                android:src="@drawable/icon_facebook"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="0.33"
+                android:src="@drawable/icon_twitter"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="0.33"
+                android:src="@drawable/icon_instagram"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

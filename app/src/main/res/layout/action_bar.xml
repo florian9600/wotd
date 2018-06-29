@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.example.mateuszzaporowski.wotd.support.ActionBarTextView
+        android:id="@+id/custom_action_bar_title"
+        android:text="Wore Day"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        fontPath="fonts/snellroundhand.otf"
+        tools:ignore="MissingPrefix"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0sp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_gravity="end">
+
+        <ImageView
+            android:id="@+id/star"
+            android:layout_width="46sp"
+            android:layout_height="46sp"
+            android:src="@drawable/star_unfilled"
+            android:layout_gravity="center_vertical"
+            android:visibility="gone"
+            />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

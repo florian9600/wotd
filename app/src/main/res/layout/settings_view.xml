@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#f1f1f1"
+        android:layout_marginTop="25dp"/>
+    <ListView
+        android:id="@android:id/list"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:dividerHeight="2dp"
+        android:divider="#f1f1f1"
+        >
+    </ListView>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#f1f1f1" />
+    <TextView
+        android:id="@+id/reset_counter"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:textColor="#f23712"
+        android:textSize="32sp"
+        android:text="@string/settings_reset_counter"
+        fontPath="fonts/Arial.ttf"
+        tools:ignore="MissingPrefix"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#f1f1f1"
+        android:layout_marginBottom="25dp"/>
+
+</LinearLayout>

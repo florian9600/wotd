@@ -1,0 +1,116 @@
+//    private void popup(String title, String[] options, int selected, Method saveChanges, Object object) {
+//
+//        PopupWindow popUp = new PopupWindow(mainActivity);
+//        popUp.setWindowLayoutMode(WRAP_CONTENT, WRAP_CONTENT);
+//        LinearLayout layout = new LinearLayout(mainActivity);
+//        layout.setBackgroundColor(Color.WHITE);
+//        layout.setOrientation(LinearLayout.VERTICAL);
+//        layout.setPadding(25, 25, 25, 25);
+//
+//        TextView tvTitle = new TextView(layout.getContext());
+//        tvTitle.setText(title);
+//        tvTitle.setTextSize(COMPLEX_UNIT_SP, 40);
+//        tvTitle.setTextColor(Color.BLACK);
+//        layout.addView(tvTitle);
+//
+//        RadioGroup rg = new RadioGroup(layout.getContext());
+//        LinearLayout.LayoutParams layoutParams =
+//                new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+//        rg.setLayoutParams(layoutParams);
+//        layout.addView(rg);
+//
+//        int i = 0;
+//        for (String option: options) {
+//            LinearLayout row = new LinearLayout(layout.getContext());
+//            row.setOrientation(LinearLayout.HORIZONTAL);
+//            row.setOnClickListener(new CustomOnClickListener(i, saveChanges, object, mainActivity, popUp, this));
+//
+//            RadioButton rb = new RadioButton(layout.getContext());
+//            if (i == selected) {
+//                rb.setChecked(true);
+//            }
+//            row.addView(rb);
+//
+//            TextView tv = new TextView(layout.getContext());
+//            tv.setText(option);
+//            tv.setTextSize(COMPLEX_UNIT_SP, 30);
+//            tv.setTextColor(Color.BLACK);
+//            row.addView(tv);
+//
+//            rg.addView(row);
+//            i++;
+//        }
+//
+////        popUp.setContentView(layout);
+////
+////        popUp.showAtLocation(layout, Gravity.CENTER, 0, 0);
+////
+////        applyDim((ViewGroup) mainActivity.getWindow().getDecorView().getRootView(), 0.7f);
+//    }
+
+//    public static void applyDim(@NonNull ViewGroup parent, float dimAmount){
+//        Drawable dim = new ColorDrawable(Color.BLACK);
+//        dim.setBounds(0, 0, parent.getWidth(), parent.getHeight());
+//        dim.setAlpha((int) (255 * dimAmount));
+//
+//        ViewGroupOverlay overlay = parent.getOverlay();
+//        overlay.add(dim);
+//    }
+
+
+package com.example.mateuszzaporowski.wotd.tabs.settings;
+
+import android.app.FragmentTransaction;
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.ViewGroupOverlay;
+import android.widget.PopupWindow;
+
+import com.example.mateuszzaporowski.wotd.MainActivity;
+import com.example.mateuszzaporowski.wotd.tabs.social.SocialTab;
+
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+
+/**
+ * Created by mateuszzaporowski on 28.05.18.
+ */
+
+public class CustomOnClickListener implements View.OnClickListener {
+    private int value;
+    private MainActivity mainActivity;
+    private PopupWindow popupWindow;
+    private Method saveChanges;
+    private Object object;
+    private SettingsTab settingsTab;
+
+    public CustomOnClickListener (int value, Method saveChanges, Object object, MainActivity mainActivity, PopupWindow popupWindow, SettingsTab settingsTab) {
+        this.value = value;
+        this.mainActivity = mainActivity;
+        this.popupWindow = popupWindow;
+        this.saveChanges = saveChanges;
+        this.object = object;
+        this.settingsTab = settingsTab;
+    }
+
+    @Override
+    public void onClick(View view) {
+
+        Object[] parameters = new Object[1];
+        parameters[0] = value;
+        try {
+            saveChanges.invoke(object, parameters);
+        } catch (IllegalAccessException | InvocationTargetException e) {
+            e.printStackTrace();
+        }
+
+        popupWindow.dismiss();
+        ViewGroupOverlay overlay = ((ViewGroup)(mainActivity.getWindow().getDecorView().getRootView())).getOverlay();
+        overlay.clear();
+
+        FragmentTransaction ftr = settingsTab.getFragmentManager().beginTransaction();
+        ftr.detach(settingsTab).attach(settingsTab).commit();
+    }
+}

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="home_favoutires">Ulubione</string>
+    <string name="home_history">Historia</string>
+    <string name="home_search">Szukaj</string>
+    <string name="appname">Word of the Day</string>
+    <string name="search_field">Szukaj…</string>
+
+    <string name="month_january">Styczeń</string>
+    <string name="month_february">Luty</string>
+    <string name="month_march">Marzec</string>
+    <string name="month_april">Kwiecień</string>
+    <string name="month_may">Maj</string>
+    <string name="month_june">Czerwiec</string>
+    <string name="month_july">Lipiec</string>
+    <string name="month_august">Sierpień</string>
+    <string name="month_september">Wrzesień</string>
+    <string name="month_october">Październik</string>
+    <string name="month_november">Listopad</string>
+    <string name="month_december">Grudzień</string>
+
+    <string name="social">Społeczne</string>
+
+    <string name="social_actual_streak">Obecna seria:</string>
+    <string name="social_full_weeks">Pełne tygodnie:</string>
+    <string name="social_completed">Ukończone:</string>
+    <string name="social_skipped_days">Pominięte:</string>
+
+    <string name="social_friends">Znajomi</string>
+    <string name="social_achievements">Osiągnięcia</string>
+
+    <string name="settings">Ustawienia</string>
+    <string name="settings_font_size">Rozmiar czcionki</string>
+    <string name="settings_app_language">Język aplikacji</string>
+    <string name="settings_learned_language">Uczony język</string>
+    <string name="settings_notifications">Powiadomienia</string>
+    <string name="settings_reset_counter">Wyzeruj licznik</string>
+    <string name="settings_reset_counter_dialog">Czy na pewno?</string>
+
+    <string name="language_lorem">Lorem</string>
+    <string name="language_english">Angielski</string>
+    <string name="language_polish">Polski</string>
+    <string name="language_german">Niemiecki</string>
+
+    <string name="fontsize_small">Mały</string>
+    <string name="fontsize_normal">Średni</string>
+    <string name="fontsize_large">Duży</string>
+    <string name="fontsize_very_large">Bardzo duży</string>
+
+    <string name="notification_0">Wyłączone</string>
+    <string name="notification_1">Codziennie wieczorem</string>
+    <string name="notification_2">Po dwóch dniach</string>
+    <string name="notification_3">Po trzech dniach</string>
+    <string name="notification_7">Po tygodniu</string>
+
+    <string name="dialogCancel">Poniechaj</string>
+    <string name="dialogYes">Tak</string>
+    <string name="dialogNo">Nie</string>
+
+    <string name="achievements">Osiagniecia</string>
+    <string name="ach_14" tools:ignore="Typos">Czternaście pod rząd!</string>
+    <string name="ach_14_desc">Rozwiąż 14 zagadek bez nawet dnia przerwy.</string>
+    <string name="ach_7" tools:ignore="Typos">Siedem pod rząd!</string>
+    <string name="ach_7_desc">Rozwiąż 7 zagadek bez nawet dnia przerwy.</string>
+    <string name="ach_30" tools:ignore="Typos">Trzydzieści pod rząd!</string>
+    <string name="ach_30_desc">Rozwiąż 30 zagadek bez nawet dnia przerwy.</string>
+    <string name="ach_favorite" tools:ignore="Typos">Ulubieniec!</string>
+    <string name="ach_favorite_desc">Oznacz swój pierwszy artykuł.</string>
+    <string name="ach_first_article" tools:ignore="Typos">Wielojęzyczność dla żółtodziobów!</string>
+    <string name="ach_first_article_desc">Rozwiąż swoją pierwszą zagadkę.</string>
+    <string name="ach_not_unlocked">Nie odblokowane</string>
+
+    <string name="notification_title">Dawno Cię nie widziałem!</string>
+    <string name="notification_text">Nie zapomnij o swoim codziennym treningu.</string>
+
+    <string name="guess_correct">Brawo!</string>
+    <string name="guess_false">Niestety błąd!</string>
+</resources>
